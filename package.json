@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/merick2158/rossait-inkoteh.git"
+    "url": "git+https://github.com/user/repository.git"
   },
   "author": "MDO",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/merick2158/rossait-inkoteh/issues"
+    "url": "https://github.com/user/repository/issues"
   },
-  "homepage": "https://github.com/merick2158/rossait-inkoteh#readme",
+  "homepage": "https://github.com/user/repository#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
