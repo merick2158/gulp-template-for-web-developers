@@ -1,4 +1,6 @@
-@@include('front-page.js');
+@@include('_parts/header.js');
+@@include('_parts/slider.js');
+@@include('_parts/news.js');
 
 function testWebP(callback) {
     var webP = new Image();

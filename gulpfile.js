@@ -1,5 +1,4 @@
-// let project_folder="dist";
-let project_folder=require("path").basename(__dirname);
+let project_folder="dist";
 let source_folder="src";
 
 let fs = require('fs');
@@ -15,7 +14,7 @@ let path={
     src:{
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         css: source_folder + "/scss/style.scss",
-        js: source_folder + "/js/script.js",
+        js: [source_folder + "/js/script.js", source_folder + "/js/common.js"],
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
     },
@@ -48,6 +47,13 @@ let { src, dest } = require('gulp'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
     fonter = require('gulp-fonter');
+
+function libFiles() {
+    return src([
+        source_folder + '/lib/**/*',
+    ])
+        .pipe(gulp.dest(project_folder + '/lib'));
+}
 
 function browserSync(params) {
     browsersync.init({
@@ -198,7 +204,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build=gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build=gulp.series(clean, gulp.parallel(js, css, html, images, fonts, libFiles));
 let watch=gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
@@ -207,6 +213,7 @@ exports.images = images;
 exports.js = js;
 exports.css = css;
 exports.html = html;
+exports.libFiles = libFiles;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

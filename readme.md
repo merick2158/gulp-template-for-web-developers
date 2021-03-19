@@ -1,6 +1,18 @@
-<h3>Gulp Template for designers</h3>
+<h3>Sany - Rossait</h3>
 <hr/>
-<p>Added all basic plugins</p>
-<p>Run using cmd "npm i" and use it as you wish</p>
+<p>Gulp gurmak üçin:</p>
+<code>npm i</code><br/>
+<code>npm install webp-converter@2.2.3 --save-dev</code>
 <hr/>
-Done using tutorial https://youtu.be/stFOy0Noahg
+<p>Gulp işletmek üçin:</p>
+<code>gulp</code>
+<hr/>
+<p>Git-e ýüklemek üçin:</p>
+<ol>
+    <li>Ilki täze branch: <code>git branch dowran</code></li>
+    <li>Täze branch-e geçmek üçin: <code>git checkout dowran</code></li>
+    <li>Ýazan kodlary git-e ibermek üçin üýşürmek <code>git add .</code></li>
+    <li>Üýşürilen kodlara gysgaça düşündiriş <code>git commit -m "ishi dyndym"</code></li>
+    <li>Kodlary git-e ýüklemek üçin <code>git push</code></li>
+</ol>
+<hr/>

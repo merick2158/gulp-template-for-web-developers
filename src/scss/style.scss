@@ -1,23 +1,6 @@
 @import "mixins";
-@import "fonts";
-body{
-    background-color: lightcoral;
-    text-align: center;
-    display: flex;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-}
-
-span {
-    font-size: 20px;
-    @media (max-width: 767px) {
-        font-size: 15px;
-    }
-}
-
-div {
-    font-size: 30px;
-    background: url("../img/cave.jpg") 0 0 no-repeat;
-    @media (max-width: 767px) {
-        font-size: 20px;
-    }
-}
+@import "_parts/normalize";
+@import "_parts/common";
+@import "_parts/header";
+@import "_parts/slider";
+@import "_parts/news";
